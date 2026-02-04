@@ -1,6 +1,6 @@
 // 정보처리기사 필기 학습 앱 - 메인 로직 (백엔드 연동 버전)
 
-const API_BASE = 'http://localhost:3000/api';
+const API_BASE = '/api';
 
 // 상태 관리
 let currentSection = 'home';
