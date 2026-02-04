@@ -49,6 +49,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 초기 상태 저장
     history.replaceState({ type: 'section', id: 'home' }, '', '');
+
+    // 로그인 폼 엔터키 지원
+    document.getElementById('loginId').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') login();
+    });
+    document.getElementById('loginPw').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') login();
+    });
+
+    // 회원가입 폼 엔터키 지원
+    document.getElementById('registerId').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') document.getElementById('registerPw').focus();
+    });
+    document.getElementById('registerPw').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') document.getElementById('registerPwConfirm').focus();
+    });
+    document.getElementById('registerPwConfirm').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') register();
+    });
 });
 
 // D-Day 계산
